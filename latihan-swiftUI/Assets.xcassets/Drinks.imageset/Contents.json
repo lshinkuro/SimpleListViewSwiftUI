@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "20191031-mojitos-three-ways-delish-ehg-2882-1584029662.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "20191031-mojitos-three-ways-delish-ehg-2882-1584029662 1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "20191031-mojitos-three-ways-delish-ehg-2882-1584029662 2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

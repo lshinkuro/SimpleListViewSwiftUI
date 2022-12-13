@@ -9,7 +9,7 @@ import SwiftUI
 
 struct itemDetail: View {
     
-    @EnvironmentObject var order: Order
+     @EnvironmentObject var order: Order
     
     let item: MenuItem
     var body: some View {

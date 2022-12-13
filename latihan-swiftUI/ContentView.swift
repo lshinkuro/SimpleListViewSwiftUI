@@ -15,13 +15,35 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(menu) { section in
-                    Section(header: Text(section.name)
-                        .font(.caption)
-                        .fontWeight(.black)){
+                    Section {
                         ForEach(section.items) { item in
                             ItemRow(item: item)
                         }
+                    } header: {
+                        HStack(spacing: 10) {
+                            Image(section.name)
+                                .frame(width: 40,height: 40)
+                                .clipShape(Circle())
+                                .overlay(Circle()
+                                    .stroke(.gray, lineWidth: 2))
+                            
+                            Text(section.name)
+                                .font(.system(size: 16))
+                                .foregroundColor(.black)
+                                .fontWeight(.black)
                         }
+                        .padding(10)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.white)
+                                .shadow(
+                                    color: Color.gray.opacity(0.4),
+                                    radius: 3, x: 0, y: 0)
+                        )
+                            
+                     
+                    }
                 }
             }.navigationTitle("Menu")
         }
