@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    let menu = Bundle.main.decode([MenuSection].self, from: "menu.json")
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(menu) { section in
+                    Section(header: Text(section.name)
+                        .font(.caption)
+                        .fontWeight(.black)){
+                        ForEach(section.items) { item in
+                            ItemRow(item: item)
+                        }
+                        }
+                }
+            }.navigationTitle("Menu")
+        }
     }
 }
 
